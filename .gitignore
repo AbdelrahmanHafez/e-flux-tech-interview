@@ -1,0 +1,12 @@
+node_modules
+# managed
+**.data.json
+**.node-persist**
+# end managed
+dist
+_IGNORE_session
+logs
+
+# managed
+**_IGNORE_**
+# end managed
