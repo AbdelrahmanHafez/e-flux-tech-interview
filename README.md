@@ -17,6 +17,7 @@ To answer the questions asked, we store the data coming from the events into a "
 
 ### Stations DB:
 Each entry in StationsDB represents a station. Each station has multiple connectors, each connector has an id, and lastReading.
+
 Notes about StationsDB:
 * We receive an event called `ConnectorListResponse`, which returns the number of connectors, but no other information about it. So we store this number in the DB.
 * We receive an event called `MeterValuesRequest` that includes the `connectorId` only, but not the reading value. So if the connectorId is not in the DB yet, we create a new entry for it with the reading value as `null`.
