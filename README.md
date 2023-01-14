@@ -6,6 +6,8 @@ The solution is written in TypeScript and Node.js, we're using an in-memory DB t
 
 ## How to run the tests
 ```bash
+git clone git@github.com:AbdelrahmanHafez/e-flux-tech-interview.git
+cd ./e-flux-tech-interview
 npm install
 npm test
 ```
