@@ -1,9 +1,8 @@
 {
-  "name": "open-wa",
+  "name": "e-flux-stations-event-handler",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "packageManager": "yarn@3.2.4",
   "devDependencies": {
     "@types/jest": "^29.2.5",
     "@types/lodash.clonedeep": "^4.5.7",
