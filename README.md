@@ -40,7 +40,7 @@ So to handle this, we're taking the max value between the two, assuming that con
 ### 2- Is our current view of the number of charging stations correct?
 According to the events that come to us, we have 3 stations, with multiple connectors, so yes.
 
-I'm guessing by "charging station" we're referring to the connector, in which case, this question refers to the assumption noted in the [Notes about StationsDB section](#notes-about-stationsdb) above, so no. We get `numConnectors` as 5 in the station with id `95b8c8af-66c8-4429-8133-3ae9002663a7`, but in the `MeterValuesNotification` we receive 3 connectors readings, so we're missing 2 connectors.
+I'm guessing by "charging station" we're referring to the connector, in which case, this question refers to the assumption noted in the previous question, so no. We get `numConnectors` as 5 in the station with id `95b8c8af-66c8-4429-8133-3ae9002663a7`, but in the `MeterValuesNotification` we receive 3 connectors readings, so we're missing 2 connectors.
 
 ### 3- What is the meter read value for each connector on the station?
 We can get this information by looking at the `lastReading` value for each connector in the stations DB.
