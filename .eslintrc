@@ -48,7 +48,6 @@
       "ignoreTemplateLiterals": true,
       "ignoreComments": true
     }],
-    "mocha-no-only/mocha-no-only": "error",
     "new-cap": ["error", {
       "newIsCapExceptions": ["acl.memoryBackend", "acl", "mongoose", "mongoose.Schema", "mongoose.Types.ObjectId", "mongodbBackend", "Buffer.from"],
       "capIsNewExceptions": ["Joi", "JSONify", "Schema", "mongoose.Schema", "CreateShipmentsAsync", "ValidateAddressAsync", "CancelPickupAsync", "CalculateRateAsync", "PrintLabelAsync", "FetchCitiesAsync", "CreatePickupAsync", "TrackShipmentsAsync", "ValidateSecretKey", "mongoose.Types.ObjectId", "Server", "MongooseHistoryPlugin", "MongodbMixin", "ExcelWriterMixin", "ObjectId", "SyncToAlgolia", "Parse", "JSONQueryStringParserMiddleware"]
@@ -76,7 +75,8 @@
     "no-param-reassign": "off",
     "no-process-exit": "off",
     "no-prototype-builtins": "off",
-    "no-redeclare": "error",
+    "no-redeclare": "off",
+    "@typescript-eslint/no-redeclare": "error",
     "no-self-compare": "error",
     "no-shadow": "off",
     "no-spaced-func": "error",
@@ -89,10 +89,12 @@
     }],
     "no-unreachable": "error",
     "no-unused-expressions": "off",
-    "no-unused-vars": ["error", {
+    "no-unused-vars": ["off"],
+    "@typescript-eslint/no-unused-vars": ["error", {
       "args": "none"
     }],
-    "no-use-before-define": [1, "nofunc"],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [1, "nofunc"],
     "no-useless-rename": "error",
     "no-var": ["error"],
     "no-whitespace-before-property": "error",
@@ -112,9 +114,7 @@
     "node/prefer-promises/fs": "error",
     "node/no-new-require": "error",
     "node/no-path-concat": "error",
-    "node/no-missing-require": ["error", {
-      "allowModules": ["speero-backend"]
-    }],
+    "node/no-missing-require": "off",
     "object-curly-spacing": ["error", "always"],
     "object-shorthand": "error",
     "one-var-declaration-per-line": ["error", "always"],
@@ -140,7 +140,7 @@
     "semi-spacing": "error",
     "semi": "error",
     "space-before-blocks": ["error", "always"],
-    "space-before-function-paren": ["error", "always"],
+    "space-before-function-paren": ["error", "never"],
     "space-in-parens": ["error", "never"],
     "space-infix-ops": "error",
     "spaced-comment": ["error", "always"],
@@ -150,14 +150,16 @@
     "wrap-iife": ["error", "outside"],
     "you-dont-need-lodash-underscore/get": "off",
     "node/no-missing-import": "off",
-    "@typescript-eslint/ban-types": "off"
+    "@typescript-eslint/ban-types": "off",
+    "node/no-unpublished-import": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-var-requires": "off"
   },
   "env": {
     "node": true,
     "jest": true
   },
   "plugins": [
-    "mocha-no-only",
     "@typescript-eslint",
     "unicorn"
   ],
