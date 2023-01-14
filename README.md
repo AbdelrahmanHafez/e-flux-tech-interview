@@ -32,6 +32,7 @@ Because `stationId` is not present in all the events payloads, we need a way to 
 With StationsDB seeded with the data from all the events, we have two pieces of information to answer this question:
 
 1- By looking at the number of connectors (with possible readings) in a station.
+
 2- By looking at the `numConnectors` value from `ConnectorListResponse` if present.
 
 So to handle this, we're taking the max value between the two, assuming that connectors are always added, and never removed. This is probably not a good assumption, but it's the best we can do with the information I have.
