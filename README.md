@@ -29,7 +29,7 @@ Because `stationId` is not present in all the events payloads, we need a way to 
 ## Questions we're trying to answer:
 ### 1- How many connectors does each charging station have?
 
-With StationsDB seeded with the data from all the events, we have two pieces of information to answer this question:
+By using [get-connectors-counts](./src//helpers/get-connectors-count.ts), with StationsDB seeded with the data from all the events, we have two pieces of information to answer this question:
 
 1- By looking at the number of connectors (with possible readings) in a station.
 
@@ -43,4 +43,4 @@ According to the events that come to us, we have 3 stations, with multiple conne
 I'm guessing by "charging station" we're referring to the connector, in which case, this question refers to the assumption noted in the previous question, so no. We get `numConnectors` as 5 in the station with id `95b8c8af-66c8-4429-8133-3ae9002663a7`, but in the `MeterValuesNotification` we receive 3 connectors readings, so we're missing 2 connectors.
 
 ### 3- What is the meter read value for each connector on the station?
-We can get this information by looking at the `lastReading` value for each connector in the stations DB.
+By using [get-connector](./src/helpers/get-connector.ts), we can get this information by looking at the `lastReading` value for a given connector in the stations DB.
